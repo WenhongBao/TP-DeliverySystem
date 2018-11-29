@@ -10,7 +10,7 @@
 namespace DeliverySystem {
     
     
-    public partial class TrackAParcel {
+    public partial class Update {
         
         /// <summary>
         /// form1 控件。
@@ -22,66 +22,57 @@ namespace DeliverySystem {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblInputOrderNumber 控件。
+        /// btnSubmit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInputOrderNumber;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
         
         /// <summary>
-        /// lbxOrderInfor 控件。
+        /// btnCancelTheOrder 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbxOrderInfor;
+        protected global::System.Web.UI.WebControls.Button btnCancelTheOrder;
         
         /// <summary>
-        /// btnTrackYourParcel 控件。
+        /// lblNewDestinationPostcode 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTrackYourParcel;
+        protected global::System.Web.UI.WebControls.Label lblNewDestinationPostcode;
         
         /// <summary>
-        /// tbxOrderNumber 控件。
+        /// lblAttention 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbxOrderNumber;
+        protected global::System.Web.UI.WebControls.Label lblAttention;
         
         /// <summary>
-        /// btnGotoUpdate 控件。
+        /// tbxNewDestinationPostcode 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGotoUpdate;
+        protected global::System.Web.UI.WebControls.TextBox tbxNewDestinationPostcode;
         
         /// <summary>
-        /// btnGotoQuickQuote 控件。
+        /// btnGotoTrackAParcel 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGotoQuickQuote;
-        
-        /// <summary>
-        /// btnGotoMainPage 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGotoMainPage;
+        protected global::System.Web.UI.WebControls.Button btnGotoTrackAParcel;
     }
 }
