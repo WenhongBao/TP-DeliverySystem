@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Button ID="btnGetAQuote" runat="server" Text="Get a quote" style="top: 409px; left: 464px; position: absolute; height: 36px; width: 124px" />
+            <asp:Button ID="btnGetAQuote" runat="server" Text="Get a quote" style="top: 409px; left: 464px; position: absolute; height: 36px; width: 124px" OnClick="btnGetAQuote_Click" />
             <asp:DropDownList ID="ddlDestinationCountry" runat="server" style="top: 93px; left: 463px; position: absolute; height: 19px; width: 136px">
                 <asp:ListItem Selected="True" Value="UnitedKingdom">United Kingdom</asp:ListItem>
                 <asp:ListItem>China</asp:ListItem>
@@ -32,8 +32,9 @@
         <asp:Label ID="lblCollectionPostcode" runat="server" style="top: 155px; left: 273px; position: absolute; height: 16px; width: 167px" Text="Collection Postcode:"></asp:Label>
         <asp:Label ID="lblDeliveryPostcode" runat="server" style="top: 228px; left: 287px; position: absolute; height: 16px; width: 158px" Text="Delivery Postcode:"></asp:Label>
         <asp:Label ID="lblParcelSize" runat="server" style="top: 305px; left: 333px; position: absolute; height: 16px; width: 113px" Text="Parcel Size:"></asp:Label>
-        <asp:Button ID="btnGotoTrackAParcel" runat="server" style="top: 89px; left: 769px; position: absolute; height: 21px; width: 115px" Text="Track a parcel" />
-        <asp:Button ID="btnGotoMainPage" runat="server" Height="21px" style="top: 34px; left: 34px; position: absolute; width: 95px" Text="&lt;- Main Page" />
+        <asp:Button ID="btnGotoTrackAParcel" runat="server" style="top: 89px; left: 769px; position: absolute; height: 21px; width: 115px" Text="Track a parcel" OnClick="btnGotoTrackAParcel_Click" />
+        <asp:Button ID="btnGotoMainPage" runat="server" Height="21px" style="top: 34px; left: 34px; position: absolute; width: 95px" Text="&lt;- Main Page" OnClick="btnGotoMainPage_Click" />
+        <asp:Label ID="lblError" runat="server" style="top: 306px; left: 769px; position: absolute; height: 16px; width: 40px" Text="[Error]"></asp:Label>
     </form>
 </body>
 </html>

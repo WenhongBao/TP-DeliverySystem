@@ -12,8 +12,8 @@
         <div>
         </div>
         <asp:Label ID="lblComfirmText" runat="server" style="top: 209px; left: 329px; position: absolute; height: 16px; width: 498px" Text="Label"></asp:Label>
-        <asp:Button ID="btnYes" runat="server" style="top: 306px; left: 431px; position: absolute; height: 21px; width: 62px" Text="Yes" />
-        <asp:Button ID="btnNo" runat="server" style="top: 306px; left: 595px; position: absolute; height: 21px; width: 62px" Text="No" />
+        <asp:Button ID="btnYes" runat="server" style="top: 306px; left: 431px; position: absolute; height: 21px; width: 62px; right: 545px;" Text="Yes" OnClick="btnYes_Click" />
+        <asp:Button ID="btnNo" runat="server" style="top: 306px; left: 595px; position: absolute; height: 21px; width: 62px" Text="No" OnClick="btnNo_Click" />
     </form>
 </body>
 </html>

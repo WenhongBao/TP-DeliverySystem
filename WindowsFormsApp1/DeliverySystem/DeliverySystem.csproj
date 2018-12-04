@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft Web Tools\Packages\AspNet.ScriptManager.jQuery.1.8.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -76,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="comfirm.aspx" />
+    <Content Include="GotQuickQuote.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="QuickQuote.aspx" />
@@ -91,6 +95,13 @@
     </Compile>
     <Compile Include="comfirm.aspx.designer.cs">
       <DependentUpon>comfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GotQuickQuote.aspx.cs">
+      <DependentUpon>GotQuickQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GotQuickQuote.aspx.designer.cs">
+      <DependentUpon>GotQuickQuote.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

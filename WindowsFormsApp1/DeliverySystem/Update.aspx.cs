@@ -13,5 +13,15 @@ namespace DeliverySystem
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("comfirm.aspx");
+        }
+
+        protected void btnCancelTheOrder_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("comfirm.aspx");
+        }
     }
 }

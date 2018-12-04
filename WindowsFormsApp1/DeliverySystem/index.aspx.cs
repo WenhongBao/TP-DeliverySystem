@@ -13,5 +13,25 @@ namespace DeliverySystem
         {
 
         }
+
+        protected void btnQuickQuote_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("QuickQuote.aspx");
+        }
+
+        protected void btnTrackAParcel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TrackAParcel.aspx");
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
     }
 }
