@@ -80,6 +80,7 @@
   <ItemGroup>
     <Content Include="comfirm.aspx" />
     <Content Include="GotQuickQuote.aspx" />
+    <Content Include="img\BG.jpg" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="QuickQuote.aspx" />

@@ -26,7 +26,15 @@ namespace DeliverySystem
 
         protected void btnGetAQuote_Click(object sender, EventArgs e)
         {
-            Response.Redirect("GotQuickQuote.aspx");
+            if (tbxCollectionPostcode.Text == "" || tbxDeliveryPostcode.Text=="")
+            {
+                lblError.Text = "Please enter the Collection Postcode and Delivery Postcode.";
+            }
+            else
+            {
+                Response.Redirect("GotQuickQuote.aspx");
+            }
+            
         }
     }
 }

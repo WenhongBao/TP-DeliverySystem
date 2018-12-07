@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
+<body style="background-image:url(img/BG.jpg); background-repeat:repeat-x; ">
     <form id="form1" runat="server">
         <div>
             <asp:Login ID="Login1" runat="server" style="top: 169px; left: 401px; position: absolute; height: 133px; width: 267px">

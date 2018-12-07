@@ -17,12 +17,15 @@ namespace DeliverySystem
         protected void btnYes_Click(object sender, EventArgs e)
         {
             lblComfirmText.Text = "Action Done!!";
-            Response.Redirect("Update.aspx");
         }
 
         protected void btnNo_Click(object sender, EventArgs e)
         {
             lblComfirmText.Text = "Action had been cancel.";
+        }
+
+        protected void btnGotoUpdate_Click(object sender, EventArgs e)
+        {
             Response.Redirect("Update.aspx");
         }
     }

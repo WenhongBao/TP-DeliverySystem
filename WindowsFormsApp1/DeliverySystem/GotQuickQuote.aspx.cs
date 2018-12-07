@@ -11,7 +11,7 @@ namespace DeliverySystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblResultOfQuote.Text = "The order has been submitted and the bill will be delivered to you when we collecting the parcel.";
         }
 
         protected void btnGotoIndex_Click(object sender, EventArgs e)

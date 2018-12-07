@@ -21,7 +21,25 @@ namespace DeliverySystem
 
         protected void btnTrackYourParcel_Click(object sender, EventArgs e)
         {
-            lbxOrderInfor.Text="(Order Information...)";
+            if (tbxOrderNumber.Text == "")
+            {
+                lblError.Text = "Please enter an order number.";
+            }
+            else
+            {
+                string displayOrderNo = "OrderNo: " + tbxOrderNumber.Text;
+                string displayCollectionPostcode = "Collection Postcode: " + "LE2 7EE";
+                string displayDestination = "Destination: " + "UK";
+                string displayDestinationPostcode = "Destination Postcode: " + "LE2 7FZ";
+                string DisplayStates = "States: " + "Packaging";
+
+                lbxOrderInfor.Items.Add(displayOrderNo);
+                lbxOrderInfor.Items.Add(displayCollectionPostcode);
+                lbxOrderInfor.Items.Add(displayDestination);
+                lbxOrderInfor.Items.Add(displayDestinationPostcode);
+                lbxOrderInfor.Items.Add(DisplayStates);
+            }
+            
         }
 
         protected void btnGotoQuickQuote_Click(object sender, EventArgs e)
@@ -31,7 +49,14 @@ namespace DeliverySystem
 
         protected void btnGotoUpdate_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Update.aspx");
+            if (tbxOrderNumber.Text == "")
+            {
+                lblError.Text = "Please enter an order number.";
+            }
+            else
+            {
+                Response.Redirect("Update.aspx");
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body style="position: relative; top: 0px; left: 0px; height: 292px">
+<body style="position: relative; top: 0px; left: 0px; height: 292px; background-image:url(img/BG.jpg); background-repeat:repeat-x; ">
     <form id="form1" runat="server">
         <div>
             <asp:Button ID="btnQuickQuote" runat="server" style="top: 167px; left: 474px; position: absolute; height: 41px; width: 136px" Text="Quick Quote" OnClick="btnQuickQuote_Click" />

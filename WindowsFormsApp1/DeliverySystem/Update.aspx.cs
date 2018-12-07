@@ -16,12 +16,25 @@ namespace DeliverySystem
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Response.Redirect("comfirm.aspx");
+            if (tbxNewDestinationPostcode.Text == "")
+            {
+                lblError.Text = "Please enter a postcode.";
+            }
+            else
+            {
+                Response.Redirect("comfirm.aspx");
+            }
+            
         }
 
         protected void btnCancelTheOrder_Click(object sender, EventArgs e)
         {
             Response.Redirect("comfirm.aspx");
+        }
+
+        protected void btnGotoTrackAParcel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TrackAParcel.aspx");
         }
     }
 }

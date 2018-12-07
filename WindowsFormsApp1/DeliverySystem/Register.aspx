@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
+<body style="background-image:url(img/BG.jpg); background-repeat:repeat-x; ">
     <form id="form1" runat="server">
         <div>
             <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" style="top: 124px; left: 382px; position: absolute; height: 249px; width: 310px">

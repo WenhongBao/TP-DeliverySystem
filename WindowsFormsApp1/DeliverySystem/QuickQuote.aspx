@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
+<body style="background-image:url(img/BG.jpg); background-repeat:repeat-x; ">
     <form id="form1" runat="server">
         <div>
             <asp:Button ID="btnGetAQuote" runat="server" Text="Get a quote" style="top: 409px; left: 464px; position: absolute; height: 36px; width: 124px" OnClick="btnGetAQuote_Click" />
@@ -34,7 +34,7 @@
         <asp:Label ID="lblParcelSize" runat="server" style="top: 305px; left: 333px; position: absolute; height: 16px; width: 113px" Text="Parcel Size:"></asp:Label>
         <asp:Button ID="btnGotoTrackAParcel" runat="server" style="top: 89px; left: 769px; position: absolute; height: 21px; width: 115px" Text="Track a parcel" OnClick="btnGotoTrackAParcel_Click" />
         <asp:Button ID="btnGotoMainPage" runat="server" Height="21px" style="top: 34px; left: 34px; position: absolute; width: 95px" Text="&lt;- Main Page" OnClick="btnGotoMainPage_Click" />
-        <asp:Label ID="lblError" runat="server" style="top: 306px; left: 769px; position: absolute; height: 16px; width: 40px" Text="[Error]"></asp:Label>
+        <asp:Label ID="lblError" runat="server" style="top: 306px; left: 769px; position: absolute; height: 16px; width: 385px" Text="[Error]"></asp:Label>
     </form>
 </body>
 </html>
