@@ -15,6 +15,28 @@ namespace BackEnd
         public Update()
         {
             InitializeComponent();
+            lblCaution.Text = "The Number for the order you are editing is 123.";
+        }
+
+        private void btnGotoIndex_Click(object sender, EventArgs e)
+        {
+            Index index = new Index();
+            this.Hide();
+            index.ShowDialog();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (cbbSelectStates.SelectedValue == null)
+            {
+                lblError.Text = "Please select a states for submit.";
+            }
+            else
+            {
+                Index index = new Index();
+                this.Hide();
+                index.ShowDialog();
+            }
         }
     }
 }
