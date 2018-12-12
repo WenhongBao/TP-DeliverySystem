@@ -78,7 +78,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ChangePassword.aspx" />
     <Content Include="comfirm.aspx" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="GotQuickQuote.aspx" />
     <Content Include="img\BG.jpg" />
     <Content Include="index.aspx" />
@@ -90,12 +92,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="comfirm.aspx.cs">
       <DependentUpon>comfirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="comfirm.aspx.designer.cs">
       <DependentUpon>comfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="GotQuickQuote.aspx.cs">
       <DependentUpon>GotQuickQuote.aspx</DependentUpon>

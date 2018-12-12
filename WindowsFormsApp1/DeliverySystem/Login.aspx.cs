@@ -18,5 +18,20 @@ namespace DeliverySystem
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Index.aspx");
+        }
+
+        protected void btnForgetPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ForgetPassword.aspx");
+        }
+
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ChangePassword.aspx");
+        }
     }
 }

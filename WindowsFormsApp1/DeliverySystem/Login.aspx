@@ -10,9 +10,14 @@
 <body style="background-image:url(img/BG.jpg); background-repeat:repeat-x; ">
     <form id="form1" runat="server">
         <div>
-            <asp:Login ID="Login1" runat="server" style="top: 169px; left: 401px; position: absolute; height: 133px; width: 267px">
+            <asp:Login ID="Login1" runat="server" style="top: 169px; left: 401px; position: absolute; height: 133px; width: 267px; right: 396px;">
             </asp:Login>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="top: 73px; left: 73px; position: absolute; height: 21px; width: 134px" Text="&lt;- Back To Index" />
         </div>
+        <asp:Button ID="btnForgetPassword" runat="server" OnClick="btnForgetPassword_Click" style="top: 201px; left: 699px; position: absolute; height: 21px; width: 122px" Text="Forget Password" />
+        <p>
+            &nbsp;</p>
+        <asp:Button ID="btnChangePassword" runat="server" OnClick="btnChangePassword_Click" style="top: 231px; left: 701px; position: absolute; height: 21px; width: 119px" Text="Change Password" />
     </form>
 </body>
 </html>

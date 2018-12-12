@@ -10,18 +10,25 @@ using System.Windows.Forms;
 
 namespace BackEnd
 {
-    public partial class Register : Form
+    public partial class ForgetPassword : Form
     {
-        public Register()
+        public ForgetPassword()
         {
             InitializeComponent();
         }
 
+        private void btnGotoLogin_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+        }
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-           if(cbxTitle.SelectedIndex==-1 || tbxFirstName.Text==""|| tbxFirstName.Text == "" || tbxLastName.Text == "" || tbxEmail.Text== "" || tbxPhoneNumber.Text == "")
+            if (tbxAccount.Text == "")
             {
-                lblError.Text = "Please fill the form.";
+                lblError.Text = "Please input your account.";
             }
             else
             {
