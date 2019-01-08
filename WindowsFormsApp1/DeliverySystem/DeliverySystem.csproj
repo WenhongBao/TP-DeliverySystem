@@ -99,6 +99,7 @@
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\clsDataConnection.cs" />
     <Compile Include="comfirm.aspx.cs">
       <DependentUpon>comfirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,6 +164,9 @@
     <Compile Include="Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
