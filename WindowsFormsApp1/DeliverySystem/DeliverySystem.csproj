@@ -78,6 +78,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DeliverySystemBank.mdf" />
+    <Content Include="App_Data\DeliverySystemBank_log.ldf">
+      <DependentUpon>DeliverySystemBank.mdf</DependentUpon>
+    </Content>
     <Content Include="ChangePassword.aspx" />
     <Content Include="comfirm.aspx" />
     <Content Include="ForgetPassword.aspx" />
@@ -92,6 +96,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\clsDataConnection.cs" />
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,7 +104,6 @@
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Code\clsDataConnection.cs" />
     <Compile Include="comfirm.aspx.cs">
       <DependentUpon>comfirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,9 +169,7 @@
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

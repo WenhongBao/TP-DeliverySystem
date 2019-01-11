@@ -50,13 +50,15 @@
   <ItemGroup>
     <Compile Include="tstCustomer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tstInvoice.cs" />
+    <Compile Include="tstStaff.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
-      <Project>{3436C1C5-A74D-4F1D-B2AB-CF524FA8224F}</Project>
+    <ProjectReference Include="..\ClassLibrary1\ClassLibrary.csproj">
+      <Project>{CF60BDDB-C69C-4A21-8BD4-1924BFA8E919}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,112 +1,114 @@
 ﻿using System;
-using ClassLibrary;
+using System.Text;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ClassLibrary1;
 
 namespace Test_Framework
 {
     [TestClass]
-    public class tstCustomer
+    public class tstStaff
     {
         [TestMethod]
         public void InstanceOk()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //test to see that it exists
-            Assert.IsNotNull(ACustomer);
+            Assert.IsNotNull(AStaff);
         }
 
         //TEST PROPERTY OK
 
         [TestMethod]
-        public void CustomerNoPropertyOK()
+        public void StaffNoPropertyOK()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
-            Int32 SomeCutomerNo = 1;
+            Int32 SomeStaffNo = 1;
             //assign the data to the property
-            ACustomer.CustomerNo = SomeCutomerNo;
+            AStaff.StaffNo = SomeStaffNo;
             //test to see that it exists
-            Assert.AreEqual(ACustomer.CustomerNo,SomeCutomerNo);
+            Assert.AreEqual(AStaff.StaffNo, SomeStaffNo);
         }
 
         [TestMethod]
         public void EmailPropertyOK()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
             string SomeEmail = "a@qq.com";
             //assign the data to the property
-            ACustomer.Customer = SomeEmail;
+            AStaff.Email = SomeEmail;
             //test to see that it exists
-            Assert.AreEqual(ACustomer.Customer, SomeEmail);
+            Assert.AreEqual(AStaff.Email, SomeEmail);
         }
 
         [TestMethod]
         public void FirstNamePropertyOK()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
-            string SomeFirstName = "Parker";
+            string SomeFirstName = "Alex";
             //assign the data to the property
-            ACustomer.Customer = SomeFirstName;
+            AStaff.FirstName = SomeFirstName;
             //test to see that it exists
-            Assert.AreEqual(ACustomer.Customer, SomeFirstName);
+            Assert.AreEqual(AStaff.FirstName, SomeFirstName);
         }
 
         [TestMethod]
         public void LastNamePropertyOK()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
-            string SomeLastName = "Bao";
+            string SomeLastName = "Peng";
             //assign the data to the property
-            ACustomer.Customer = SomeLastName;
+            AStaff.LastName = SomeLastName;
             //test to see that it exists
-            Assert.AreEqual(ACustomer.Customer, SomeLastName);
+            Assert.AreEqual(AStaff.LastName, SomeLastName);
         }
 
         [TestMethod]
-        public void PostCodePropertyOK()
+        public void SectionPropertyOK()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
-            string SomePostCode = "LE2 7EE";
+            string SomeSection = "Manager";
             //assign the data to the property
-            ACustomer.Customer = SomePostCode;
+            AStaff.Section = SomeSection;
             //test to see that it exists
-            Assert.AreEqual(ACustomer.Customer, SomePostCode);
+            Assert.AreEqual(AStaff.Section, SomeSection);
         }
 
         [TestMethod]
         public void TelephonePropertyOK()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
             string SomeTelephone = "07526913273";
             //assign the data to the property
-            ACustomer.Customer = SomeTelephone;
+            AStaff.Telephone = SomeTelephone;
             //test to see that it exists
-            Assert.AreEqual(ACustomer.Customer, SomeTelephone);
+            Assert.AreEqual(AStaff.Telephone, SomeTelephone);
         }
 
         [TestMethod]
         public void TitlePropertyOK()
         {
             //create an instance of the class
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //create some test data to assign to the property
             string SomeTitle = "Mr";
             //assign the data to the property
-            ACustomer.Customer = SomeTitle;
+            AStaff.Title = SomeTitle;
             //test to see that it exists
-            Assert.AreEqual(ACustomer.Customer, SomeTitle);
+            Assert.AreEqual(AStaff.Title, SomeTitle);
         }
 
         //Test Method OK
@@ -115,19 +117,19 @@ namespace Test_Framework
         public void ValidMethodOK()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "1030765617@qq.com";
-            string SomeFirstName = "Parker";
-            string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeFirstName = "Alex";
+            string SomeLastName = "Peng";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -136,13 +138,13 @@ namespace Test_Framework
         public void FindMethodOK()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(SomeCustomerNo);
+            Found = AStaff.Find(SomeStaffNo);
             //test to see that the result is correct
             Assert.IsTrue(Found);
         }
@@ -152,17 +154,17 @@ namespace Test_Framework
         public void TestEmailFound()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //boolean variable to record if data is OK
             Boolean OK = true;
             //create some test data to pass to method
-            Int32 CustomerNo = 1;
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(CustomerNo);
+            Found = AStaff.Find(StaffNo);
             //check property on
-            if (ACustomer.Email != "a@qq.com")
+            if (AStaff.Email != "a@qq.com")
             {
                 OK = false;
             }
@@ -174,17 +176,17 @@ namespace Test_Framework
         public void TestFirstNameFound()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //boolean variable to record if data is OK
             Boolean OK = true;
             //create some test data to pass to method
-            Int32 CustomerNo = 1;
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(CustomerNo);
+            Found = AStaff.Find(StaffNo);
             //check property on
-            if (ACustomer.FirstName != "Parker")
+            if (AStaff.FirstName != "Alex")
             {
                 OK = false;
             }
@@ -195,17 +197,17 @@ namespace Test_Framework
         public void TestLastNameFound()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //boolean variable to record if data is OK
             Boolean OK = true;
             //create some test data to pass to method
-            Int32 CustomerNo = 1;
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(CustomerNo);
+            Found = AStaff.Find(StaffNo);
             //check property on
-            if (ACustomer.LastName != "Bao")
+            if (AStaff.LastName != "Peng")
             {
                 OK = false;
             }
@@ -213,20 +215,20 @@ namespace Test_Framework
         }
 
         [TestMethod]
-        public void TestPostcodeFound()
+        public void TestSectionFound()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //boolean variable to record if data is OK
             Boolean OK = true;
             //create some test data to pass to method
-            Int32 CustomerNo = 1;
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(CustomerNo);
+            Found = AStaff.Find(StaffNo);
             //check property on
-            if (ACustomer.Postcode != "LE2 7EE")
+            if (AStaff.Section != "Manager")
             {
                 OK = false;
             }
@@ -237,17 +239,17 @@ namespace Test_Framework
         public void TestTitleFound()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //boolean variable to record if data is OK
             Boolean OK = true;
             //create some test data to pass to method
-            Int32 CustomerNo = 1;
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(CustomerNo);
+            Found = AStaff.Find(StaffNo);
             //check property on
-            if (ACustomer.Title != "Mr")
+            if (AStaff.Title != "Mr")
             {
                 OK = false;
             }
@@ -258,17 +260,17 @@ namespace Test_Framework
         public void TestTelephoneFound()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //boolean variable to record if data is OK
             Boolean OK = true;
             //create some test data to pass to method
-            Int32 CustomerNo = 1;
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(CustomerNo);
+            Found = AStaff.Find(StaffNo);
             //check property on
-            if (ACustomer.Telephone != "07526913273")
+            if (AStaff.Telephone != "07526913273")
             {
                 OK = false;
             }
@@ -276,172 +278,171 @@ namespace Test_Framework
         }
 
         [TestMethod]
-        public void TestCustomerNoFound()
+        public void TestStaffNoFound()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             Boolean Found = false;
             //boolean variable to record if data is OK
             Boolean OK = true;
             //create some test data to pass to method
-            Int32 CustomerNo = 1;
+            Int32 StaffNo = 1;
             //invoke the method
-            Found = ACustomer.Find(CustomerNo);
+            Found = AStaff.Find(StaffNo);
             //check property on
-            if (ACustomer.CustomerNo != 1)
+            if (AStaff.StaffNo != 1)
             {
                 OK = false;
             }
             Assert.IsTrue(OK);
         }
 
-        //Test CustomerNo
+        //Test StaffNo
         [TestMethod]
-        public void CustomerNoMinLessOne()
+        public void StaffNoMinLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 0;
+            Int32 SomeStaffNo = 0;
             string SomeEmail = "1030765617@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "LE2 7FZ";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
 
         [TestMethod]
-        public void CustomerNoMinBoundary()
+        public void StaffNoMinBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "1030765617@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "LE2 7FZ";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void CustomerNoMinPlusOne()
+        public void StaffNoMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 2;
+            Int32 SomeStaffNo = 2;
             string SomeEmail = "1030765617@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "LE2 7FZ";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void CustomerNoMaxLessOne()
+        public void StaffNoMaxLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 2147483646;
+            Int32 SomeStaffNo = 2147483646;
             string SomeEmail = "1030765617@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "LE2 7FZ";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void CustomerNoMaxBoundary()
+        public void StaffNoMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 2147483647;
+            Int32 SomeStaffNo = 2147483647;
             string SomeEmail = "1030765617@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "LE2 7FZ";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         //[TestMethod]
-        //public void CustomerNoMaxPlusOne()
+        //public void StaffNoMaxPlusOne()
         //{
         //    //create an instance of the class we want to create
-        //    clsCustomer ACustomer = new clsCustomer();
+        //    clsStaff AStaff = new clsStaff();
         //    //string variable to store any error message
         //    String Error = "";
         //    //create some test data to pass to method
-        //    //Error here
-        //    Int32 SomeCustomerNo = 2147483648;
+        //    Int32 SomeStaffNo = 2147483648;
         //    string SomeEmail = "1030765617@qq.com";
         //    string SomeFirstName = "Parker";
         //    string SomeLastName = "Bao";
-        //    string SomePostcode = "LE2 7FZ";
+        //    string SomeSection = "LE2 7FZ";
         //    string SomeTelephone = "07526913273";
         //    string SomeTitle = "Mr";
         //    //invoke the method
-        //    Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+        //    Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
         //    //test to see that the result is correct
         //    Assert.AreEqual(Error, "");
         //}
 
         [TestMethod]
-        public void CustomerNoMid()
+        public void StaffNoMid()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1073741824;
+            Int32 SomeStaffNo = 1073741824;
             string SomeEmail = "1030765617@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "LE2 7FZ";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -451,19 +452,19 @@ namespace Test_Framework
         public void EmailMinLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -472,19 +473,19 @@ namespace Test_Framework
         public void EmailMinBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -493,19 +494,19 @@ namespace Test_Framework
         public void EmailMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "aa";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -514,19 +515,19 @@ namespace Test_Framework
         public void EmailMaxLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "aaaaaaaaaaaaaaaaaaa";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -535,19 +536,19 @@ namespace Test_Framework
         public void EmailMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "aaaaaaaaaaaaaaaaaaaa";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -556,19 +557,19 @@ namespace Test_Framework
         public void EmailMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "aaaaaaaaaaaaaaaaaaaaa";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -577,19 +578,19 @@ namespace Test_Framework
         public void EmailMid()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
-            string SomeEmail = "aaaaaaaaa";
+            Int32 SomeStaffNo = 1;
+            string SomeEmail = "aaaaaaaaaa";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -598,19 +599,19 @@ namespace Test_Framework
         public void EmailExtremeMax()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -620,19 +621,19 @@ namespace Test_Framework
         public void FirstNameMinLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -641,19 +642,19 @@ namespace Test_Framework
         public void FirstNameMinBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "a";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -662,19 +663,19 @@ namespace Test_Framework
         public void FirstNameMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
-            string SomeFirstName = "a";
+            string SomeFirstName = "aa";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -683,19 +684,19 @@ namespace Test_Framework
         public void FirstNameMaxLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "aaaaaaaaaaaaaaaaaaa";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -704,19 +705,19 @@ namespace Test_Framework
         public void FirstNameMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "aaaaaaaaaaaaaaaaaaaa";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -725,19 +726,19 @@ namespace Test_Framework
         public void FirstNameMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "aaaaaaaaaaaaaaaaaaaaa";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -746,19 +747,19 @@ namespace Test_Framework
         public void FirstNameMid()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
-            string SomeFirstName = "aaaaaaaaa";
+            string SomeFirstName = "aaaaaaaaaa";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -767,19 +768,19 @@ namespace Test_Framework
         public void FirstNameExtremeMax()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff AStaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = AStaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -789,19 +790,19 @@ namespace Test_Framework
         public void LastNameMinLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -810,19 +811,19 @@ namespace Test_Framework
         public void LastNameMinBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "a";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -831,19 +832,19 @@ namespace Test_Framework
         public void LastNameMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "aa";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -852,19 +853,19 @@ namespace Test_Framework
         public void LastNameMaxLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "aaaaaaaaaaaaaaaaaaa";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -873,19 +874,19 @@ namespace Test_Framework
         public void LastNameMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "aaaaaaaaaaaaaaaaaaaa";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -894,19 +895,19 @@ namespace Test_Framework
         public void LastNameMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "aaaaaaaaaaaaaaaaaaaaa";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -915,19 +916,19 @@ namespace Test_Framework
         public void LastNameMid()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
-            string SomeLastName = "aaaaaaaaa";
-            string SomePostcode = "LE2 7FZ";
+            string SomeLastName = "aaaaaaaaaa";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -936,188 +937,188 @@ namespace Test_Framework
         public void LastNameExtremeMax()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-            string SomePostcode = "LE2 7FZ";
+            string SomeSection = "Manager";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
-        //Test Postcode
+        //Test Section
         [TestMethod]
-        public void PostcodeMinLessOne()
+        public void SectionMinLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "";
+            string SomeSection = "";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
-            //test to see that the result is correct
-            Assert.AreEqual(Error, "");
-        }
-
-        [TestMethod]
-        public void PostcodeMinBoundary()
-        {
-            //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
-            //string variable to store any error message
-            String Error = "";
-            //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
-            string SomeEmail = "a@qq.com";
-            string SomeFirstName = "Parker";
-            string SomeLastName = "Bao";
-            string SomePostcode = "a";
-            string SomeTelephone = "07526913273";
-            string SomeTitle = "Mr";
-            //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void PostcodeMinPlusOne()
+        public void SectionMinBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "aa";
+            string SomeSection = "a";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void PostcodeMaxLessOne()
+        public void SectionMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "aaaaaaaaa";
+            string SomeSection = "aa";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void PostcodeMaxBoundary()
+        public void SectionMaxLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "aaaaaaaaaa";
+            string SomeSection = "aaaaaaaaaaaaaaaaaaa";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void PostcodeMaxPlusOne()
+        public void SectionMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "aaaaaaaaaaa";
+            string SomeSection = "aaaaaaaaaaaaaaaaaaaa";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void PostcodeMid()
+        public void SectionMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "aaaaa";
+            string SomeSection = "aaaaaaaaaaaaaaaaaaaaa";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
-        public void PostcodeExtremeMax()
+        public void SectionMid()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string SomeSection = "aaaaaaaaaa";
             string SomeTelephone = "07526913273";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SectionExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsStaff ASaff = new clsStaff();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to method
+            Int32 SomeStaffNo = 1;
+            string SomeEmail = "a@qq.com";
+            string SomeFirstName = "Parker";
+            string SomeLastName = "Bao";
+            string SomeSection = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string SomeTelephone = "07526913273";
+            string SomeTitle = "Mr";
+            //invoke the method
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1127,19 +1128,19 @@ namespace Test_Framework
         public void TelephoneMinLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1148,19 +1149,19 @@ namespace Test_Framework
         public void TelephoneMinBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "a";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1169,19 +1170,19 @@ namespace Test_Framework
         public void TelephoneMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "aa";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1190,19 +1191,19 @@ namespace Test_Framework
         public void TelephoneMaxLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "aaaaaaaaaaaaaaaaaaa";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1211,19 +1212,19 @@ namespace Test_Framework
         public void TelephoneMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "aaaaaaaaaaaaaaaaaaaa";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1232,19 +1233,19 @@ namespace Test_Framework
         public void TelephoneMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "aaaaaaaaaaaaaaaaaaaaa";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1253,19 +1254,19 @@ namespace Test_Framework
         public void TelephoneMid()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "aaaaaaaaa";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1274,19 +1275,19 @@ namespace Test_Framework
         public void TelephoneExtremeMax()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             string SomeTitle = "Mr";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1296,19 +1297,19 @@ namespace Test_Framework
         public void TitleMinLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1317,19 +1318,19 @@ namespace Test_Framework
         public void TitleMinBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "a";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1338,19 +1339,19 @@ namespace Test_Framework
         public void TitleMinPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "aa";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1359,19 +1360,19 @@ namespace Test_Framework
         public void TitleMaxLessOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "aaaaaaaaa";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1380,19 +1381,19 @@ namespace Test_Framework
         public void TitleMaxBoundary()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "aaaaaaaaaa";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1401,19 +1402,19 @@ namespace Test_Framework
         public void TitleMaxPlusOne()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "aaaaaaaaaaa";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1422,19 +1423,19 @@ namespace Test_Framework
         public void TitleMid()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "aaaaa";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -1443,19 +1444,19 @@ namespace Test_Framework
         public void TitleExtremeMax()
         {
             //create an instance of the class we want to create
-            clsCustomer ACustomer = new clsCustomer();
+            clsStaff ASaff = new clsStaff();
             //string variable to store any error message
             String Error = "";
             //create some test data to pass to method
-            Int32 SomeCustomerNo = 1;
+            Int32 SomeStaffNo = 1;
             string SomeEmail = "a@qq.com";
             string SomeFirstName = "Parker";
             string SomeLastName = "Bao";
-            string SomePostcode = "LE2 7EE";
+            string SomeSection = "Manager";
             string SomeTelephone = "11111111111";
             string SomeTitle = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             //invoke the method
-            Error = ACustomer.Valid(SomeCustomerNo, SomeEmail, SomeFirstName, SomeLastName, SomePostcode, SomeTelephone, SomeTitle);
+            Error = ASaff.Valid(SomeStaffNo, SomeEmail, SomeFirstName, SomeLastName, SomeSection, SomeTelephone, SomeTitle);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
