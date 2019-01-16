@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 
 namespace ClassLibrary1
 {
@@ -194,7 +195,24 @@ namespace ClassLibrary1
 
         public bool Find(int someStaffNo)
         {
-            throw new NotImplementedException();
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@StaffNo", someStaffNo);
+            DB.Execute("sproc_tblStaff_FilterByStaffNo");
+            if (DB.Count == 1)
+            {
+                mStaffNo = Convert.ToInt32(DB.DataTable.Rows[0]["StaffNo"]);
+                mEmail = Convert.ToString(DB.DataTable.Rows[0]["Email"]);
+                mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                mLastName = Convert.ToString(DB.DataTable.Rows[0]["LastName"]);
+                mSection  = Convert.ToString(DB.DataTable.Rows[0]["Section"]);
+                mTelephone = Convert.ToString(DB.DataTable.Rows[0]["Telephone"]);
+                mTitle = Convert.ToString(DB.DataTable.Rows[0]["Title"]);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

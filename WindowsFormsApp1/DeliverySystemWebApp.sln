@@ -14,6 +14,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Framework", "Test Fram
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{CF60BDDB-C69C-4A21-8BD4-1924BFA8E919}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F26AB91-C297-4ED8-88CC-CD44A37B44BB}"
+	ProjectSection(SolutionItems) = preProject
+		App_Data\TestDataBank.mdf = App_Data\TestDataBank.mdf
+		App_Data\TestDataBank_log.ldf = App_Data\TestDataBank_log.ldf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

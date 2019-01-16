@@ -41,7 +41,7 @@ namespace Test_Framework
             //create an instance of the class
             clsInvoice AInvoice = new clsInvoice();
             //create some test data to assign to the property
-            DateTime SomeDateCreated = Convert.ToDateTime("16/09/2018");
+            string SomeDateCreated = "2018/09/06";
             //assign the data to the property
             AInvoice.DateCreated = SomeDateCreated;
             //test to see that it exists
@@ -161,7 +161,7 @@ namespace Test_Framework
             //invoke the method
             Found = AInvoice.Find(InvoiceNo);
             //check property on
-            if (AInvoice.DateCreated != Convert.ToDateTime("2018/9/8"))
+            if (AInvoice.DateCreated != "2018/09/08")
             {
                 OK = false;
             }

@@ -6,7 +6,7 @@ namespace ClassLibrary
     {
         //private data member
         private Int32 mInvoiceNo;
-        private DateTime mDateCreated;
+        private string mDateCreated;
         private double mPrice;
         private string mPostcode;
         private Int32 mOrderNo;
@@ -23,7 +23,7 @@ namespace ClassLibrary
             }
         }
 
-        public DateTime DateCreated
+        public string DateCreated
         {
             get
             {
@@ -115,7 +115,7 @@ namespace ClassLibrary
                 //record the error
                 Error = Error + "The price must be greater than 0: ";
             }
-            //if the office location is blank
+            //if the somePostcode is blank
             if (somePostcode == "")
             {
                 //record the error
@@ -151,7 +151,7 @@ namespace ClassLibrary
             if (DB.Count == 1)
             {
                 mInvoiceNo = Convert.ToInt32(DB.DataTable.Rows[0]["InvoiceNo"]);
-                mDateCreated = Convert.ToDateTime(DB.DataTable.Rows[0]["DateCreated"]);
+                mDateCreated = Convert.ToString(DB.DataTable.Rows[0]["DateCreated"]);
                 mPrice = Convert.ToDouble(DB.DataTable.Rows[0]["Price"]);
                 mPostcode = Convert.ToString(DB.DataTable.Rows[0]["Postcode"]);
                 mOrderNo = Convert.ToInt32(DB.DataTable.Rows[0]["OrderNo"]);

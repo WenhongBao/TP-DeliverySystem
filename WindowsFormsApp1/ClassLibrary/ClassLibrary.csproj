@@ -58,16 +58,9 @@
     <Compile Include="clsCustomer.cs" />
     <Compile Include="App_Code\clsDataConnection.cs" />
     <Compile Include="clsInvoice.cs" />
+    <Compile Include="clsOrder.cs" />
     <Compile Include="clsStaff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App_Data\TestDataBank.mdf" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App_Data\TestDataBank_log.ldf">
-      <DependentUpon>TestDataBank.mdf</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
