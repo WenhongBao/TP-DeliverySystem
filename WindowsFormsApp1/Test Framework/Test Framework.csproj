@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstInvoice.cs" />
     <Compile Include="tstOrder.cs" />
+    <Compile Include="tstOrderCollection.cs" />
     <Compile Include="tstStaff.cs" />
   </ItemGroup>
   <ItemGroup>

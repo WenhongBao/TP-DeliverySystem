@@ -142,12 +142,12 @@ namespace ClassLibrary1
                 //record the error
                 Error = Error + "The someOrderNo must be lesser than 2147483647: ";
             }
-            //if the someActive no true
-            if (someActive != true || someActive != false)
-            {
-                //record the error
-                Error = Error + "The someActive must be true or false: ";
-            }
+            ////if the someActive no true
+            //if (someActive != true || someActive != false)
+            //{
+            //    //record the error
+            //    Error = Error + "The someActive must be true or false: ";
+            //}
             //if the someCollectionPostcode is blank
             if (someCollectionPostcode == "")
             {

@@ -59,6 +59,7 @@
     <Compile Include="App_Code\clsDataConnection.cs" />
     <Compile Include="clsInvoice.cs" />
     <Compile Include="clsOrder.cs" />
+    <Compile Include="clsOrderCollection.cs" />
     <Compile Include="clsStaff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
