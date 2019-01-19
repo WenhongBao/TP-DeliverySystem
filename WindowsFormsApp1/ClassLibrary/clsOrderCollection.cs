@@ -11,7 +11,17 @@ namespace ClassLibrary1
         //private data member thisTutor
         clsOrder mThisOrder = new clsOrder();
 
-        public int Count { get; set; }
+        public int Count
+        {
+            get
+            {
+                return mOrderList.Count;
+            }
+            set
+            {
+
+            }
+        }
         public List<clsOrder> OrderList
         {
             get
@@ -44,7 +54,7 @@ namespace ClassLibrary1
             //object for data connection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure
-            DB.Execute("sproc_tblTutor_SelectAll");
+            DB.Execute("sproc_tblOrder_SelectAll");
             //populate the array list with the data table
             PopulateArray(DB);
         }
@@ -95,5 +105,43 @@ namespace ClassLibrary1
             }
         }
 
+        public int Add()
+        {
+            //adds a new record to the database based on the values of thisTutor
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            //DB.AddParameter("@OrderNo", mThisOrder.OrderNo);
+            DB.AddParameter("@Active", mThisOrder.Active);
+            DB.AddParameter("@CollectionPostcode", mThisOrder.CollectionPostcode);
+            DB.AddParameter("@DestinationCountry", mThisOrder.DestinationCountry);
+            DB.AddParameter("@DestinationPostcode", mThisOrder.DestinationPostcode);
+            DB.AddParameter("@DateCreated", mThisOrder.DateCreated);
+            DB.AddParameter("@ParcelSize", mThisOrder.ParcelSize);
+            DB.AddParameter("@Status", mThisOrder.Status);
+            DB.AddParameter("@CustomerNo", mThisOrder.CustomerNo);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblOrder_Insert");
         }
+
+        public void Update()
+        {
+            //adds a new record to the database based on the values of thisTutor
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@OrderNo", mThisOrder.OrderNo);
+            DB.AddParameter("@Active", mThisOrder.Active);
+            DB.AddParameter("@CollectionPostcode", mThisOrder.CollectionPostcode);
+            DB.AddParameter("@DestinationCountry", mThisOrder.DestinationCountry);
+            DB.AddParameter("@DestinationPostcode", mThisOrder.DestinationPostcode);
+            DB.AddParameter("@DateCreated", mThisOrder.DateCreated);
+            DB.AddParameter("@ParcelSize", mThisOrder.ParcelSize);
+            DB.AddParameter("@Status", mThisOrder.Status);
+            DB.AddParameter("@CustomerNo", mThisOrder.CustomerNo);
+            //execute the query returning the primary key value
+            DB.Execute("sproc_tblOrder_Update");
+        }
+
     }
+}
