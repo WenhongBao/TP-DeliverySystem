@@ -27,10 +27,10 @@
             </asp:DropDownList>
             <asp:TextBox ID="tbxCollectionPostcode" runat="server" style="top: 159px; left: 461px; position: absolute; height: 19px; width: 148px"></asp:TextBox>
         </div>
-        <asp:TextBox ID="tbxDeliveryPostcode" runat="server" style="top: 225px; left: 460px; position: absolute; height: 19px; width: 148px"></asp:TextBox>
+        <asp:TextBox ID="tbxDestinationPostcode" runat="server" style="top: 225px; left: 460px; position: absolute; height: 19px; width: 148px"></asp:TextBox>
         <asp:Label ID="lblDestinationCountry" runat="server" style="top: 96px; left: 273px; position: absolute; height: 16px; width: 169px" Text="Destination Country:"></asp:Label>
         <asp:Label ID="lblCollectionPostcode" runat="server" style="top: 155px; left: 273px; position: absolute; height: 16px; width: 167px" Text="Collection Postcode:"></asp:Label>
-        <asp:Label ID="lblDeliveryPostcode" runat="server" style="top: 228px; left: 287px; position: absolute; height: 16px; width: 158px" Text="Delivery Postcode:"></asp:Label>
+        <asp:Label ID="lblDeliveryPostcode" runat="server" style="top: 228px; left: 265px; position: absolute; height: 16px; width: 180px" Text="Destination Postcode:"></asp:Label>
         <asp:Label ID="lblParcelSize" runat="server" style="top: 305px; left: 333px; position: absolute; height: 16px; width: 113px" Text="Parcel Size:"></asp:Label>
         <asp:Button ID="btnGotoTrackAParcel" runat="server" style="top: 89px; left: 769px; position: absolute; height: 21px; width: 115px" Text="Track a parcel" OnClick="btnGotoTrackAParcel_Click" />
         <asp:Button ID="btnGotoMainPage" runat="server" Height="21px" style="top: 34px; left: 34px; position: absolute; width: 95px" Text="&lt;- Main Page" OnClick="btnGotoMainPage_Click" />

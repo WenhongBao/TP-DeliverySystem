@@ -6,11 +6,22 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            top: 169px;
+            left: 388px;
+            position: absolute;
+            height: 133px;
+            width: 280px;
+            right: 370px;
+            bottom: 252px;
+        }
+    </style>
 </head>
 <body style="background-image:url(img/BG.jpg); background-repeat:repeat-x; ">
     <form id="form1" runat="server">
         <div>
-            <asp:Login ID="Login1" runat="server" style="top: 169px; left: 401px; position: absolute; height: 133px; width: 267px; right: 396px;">
+            <asp:Login ID="Login1" runat="server" CreateUserText="Sign Up" CreateUserUrl="~/SignUp.aspx" DestinationPageUrl="~/Secure/index.aspx" CssClass="auto-style1">
             </asp:Login>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="top: 73px; left: 73px; position: absolute; height: 21px; width: 134px" Text="&lt;- Back To Index" />
         </div>

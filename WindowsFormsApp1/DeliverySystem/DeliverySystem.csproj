@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Secure\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,16 +84,17 @@
       <DependentUpon>DeliverySystemBank.mdf</DependentUpon>
     </Content>
     <Content Include="ChangePassword.aspx" />
-    <Content Include="comfirm.aspx" />
+    <Content Include="Secure\comfirm.aspx" />
     <Content Include="ForgetPassword.aspx" />
-    <Content Include="GotQuickQuote.aspx" />
+    <Content Include="Secure\GotQuickQuote.aspx" />
     <Content Include="img\BG.jpg" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="QuickQuote.aspx" />
-    <Content Include="Register.aspx" />
-    <Content Include="TrackAParcel.aspx" />
-    <Content Include="Update.aspx" />
+    <Content Include="Secure\QuickQuote.aspx" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="States.txt" />
+    <Content Include="Secure\TrackAParcel.aspx" />
+    <Content Include="Secure\Update.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,11 +106,11 @@
     <Compile Include="ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="comfirm.aspx.cs">
+    <Compile Include="Secure\comfirm.aspx.cs">
       <DependentUpon>comfirm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="comfirm.aspx.designer.cs">
+    <Compile Include="Secure\comfirm.aspx.designer.cs">
       <DependentUpon>comfirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForgetPassword.aspx.cs">
@@ -118,11 +120,11 @@
     <Compile Include="ForgetPassword.aspx.designer.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GotQuickQuote.aspx.cs">
+    <Compile Include="Secure\GotQuickQuote.aspx.cs">
       <DependentUpon>GotQuickQuote.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GotQuickQuote.aspx.designer.cs">
+    <Compile Include="Secure\GotQuickQuote.aspx.designer.cs">
       <DependentUpon>GotQuickQuote.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
@@ -140,36 +142,41 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuickQuote.aspx.cs">
+    <Compile Include="Secure\QuickQuote.aspx.cs">
       <DependentUpon>QuickQuote.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="QuickQuote.aspx.designer.cs">
+    <Compile Include="Secure\QuickQuote.aspx.designer.cs">
       <DependentUpon>QuickQuote.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TrackAParcel.aspx.cs">
+    <Compile Include="Secure\TrackAParcel.aspx.cs">
       <DependentUpon>TrackAParcel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TrackAParcel.aspx.designer.cs">
+    <Compile Include="Secure\TrackAParcel.aspx.designer.cs">
       <DependentUpon>TrackAParcel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Update.aspx.cs">
+    <Compile Include="Secure\Update.aspx.cs">
       <DependentUpon>Update.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Update.aspx.designer.cs">
+    <Compile Include="Secure\Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{CF60BDDB-C69C-4A21-8BD4-1924BFA8E919}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

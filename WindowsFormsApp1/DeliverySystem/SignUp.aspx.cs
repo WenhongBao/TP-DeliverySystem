@@ -13,5 +13,10 @@ namespace DeliverySystem
         {
 
         }
+
+        protected void btnGotoIndex_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Index.aspx");
+        }
     }
 }

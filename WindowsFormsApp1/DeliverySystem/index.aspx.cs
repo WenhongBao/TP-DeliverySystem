@@ -16,12 +16,12 @@ namespace DeliverySystem
 
         protected void btnQuickQuote_Click(object sender, EventArgs e)
         {
-            Response.Redirect("QuickQuote.aspx");
+            Response.Redirect("Secure/QuickQuote.aspx");
         }
 
         protected void btnTrackAParcel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TrackAParcel.aspx");
+            Response.Redirect("Secure/TrackAParcel.aspx");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace DeliverySystem
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Register.aspx");
+            Response.Redirect("SignUp.aspx");
         }
     }
 }
