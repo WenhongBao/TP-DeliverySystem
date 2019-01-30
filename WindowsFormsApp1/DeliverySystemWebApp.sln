@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliverySystem", "DeliverySystem\DeliverySystem.csproj", "{F93CEC74-C263-4723-A82A-CE68D793719A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{CF60BDDB-C69C-4A21-8BD4-1924BFA8E919} = {CF60BDDB-C69C-4A21-8BD4-1924BFA8E919}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEnd", "BackEnd\BackEnd.csproj", "{F7E2E61B-1485-4325-9E14-EA1A0F0970CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Framework", "Test Framework\Test Framework.csproj", "{F8E0918A-3ED8-4420-955D-53F8DF936CB4}"
@@ -20,16 +15,34 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		App_Data\TestDataBank_log.ldf = App_Data\TestDataBank_log.ldf
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite1(1)", "WebSite1\", "{325E3BC8-BAB3-479D-A41E-8392C808AB9A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_15399"
+		Debug.AspNetCompiler.PhysicalPath = "WebSite1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15399\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_15399"
+		Release.AspNetCompiler.PhysicalPath = "WebSite1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15399\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "15399"
+		SlnRelativePath = "WebSite1\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F93CEC74-C263-4723-A82A-CE68D793719A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F93CEC74-C263-4723-A82A-CE68D793719A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F93CEC74-C263-4723-A82A-CE68D793719A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F93CEC74-C263-4723-A82A-CE68D793719A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7E2E61B-1485-4325-9E14-EA1A0F0970CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7E2E61B-1485-4325-9E14-EA1A0F0970CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7E2E61B-1485-4325-9E14-EA1A0F0970CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,6 +55,10 @@ Global
 		{CF60BDDB-C69C-4A21-8BD4-1924BFA8E919}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF60BDDB-C69C-4A21-8BD4-1924BFA8E919}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF60BDDB-C69C-4A21-8BD4-1924BFA8E919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325E3BC8-BAB3-479D-A41E-8392C808AB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325E3BC8-BAB3-479D-A41E-8392C808AB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325E3BC8-BAB3-479D-A41E-8392C808AB9A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{325E3BC8-BAB3-479D-A41E-8392C808AB9A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
