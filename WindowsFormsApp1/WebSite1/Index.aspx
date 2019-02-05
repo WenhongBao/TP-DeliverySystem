@@ -25,8 +25,8 @@
         .auto-style3 {
             height: 21px;
             position: absolute;
-            top: 53px;
-            right: 48px;
+            top: 60px;
+            right: 388px;
         }
         .auto-style4 {
             width: 62px;
@@ -38,8 +38,8 @@
         .auto-style5 {
             height: 21px;
             position: absolute;
-            top: 86px;
-            left: 812px;
+            top: 61px;
+            left: 716px;
             margin-bottom: 1px;
         }
         .auto-style6 {

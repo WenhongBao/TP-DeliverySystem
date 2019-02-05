@@ -75,7 +75,7 @@ public partial class ChangePassword : System.Web.UI.Page
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         //go back to the main page
-        Response.Redirect("Default.aspx");
+        Response.Redirect("Index.aspx");
     }
 
     protected void btnChange_Click(object sender, EventArgs e)

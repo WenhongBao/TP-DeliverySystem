@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,10 @@ public partial class Index : System.Web.UI.Page
         //set the state of the menu buttons
         Authenticated(Sec.Authenticated);
 
+        //create a customer object
+        clsCustomer customer = new clsCustomer();
+        string FirstName = customer.GetFirstNameByEmail(Sec.UserEMail);
+        lblHi.Text = "Hi~  " + FirstName;
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)

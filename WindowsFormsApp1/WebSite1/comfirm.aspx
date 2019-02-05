@@ -37,7 +37,7 @@
         <asp:Label ID="lblComfirmText" runat="server" style="top: 209px; left: 329px; position: absolute; height: 16px; width: 498px" Text="Label"></asp:Label>
         <asp:Button ID="btnNo" runat="server" CssClass="auto-style2" Text="No" />
         <asp:Button ID="btnYes" runat="server" CssClass="auto-style3" OnClick="btnYes_Click" Text="Yes" />
-        <asp:Button ID="btnGoToUpdate" runat="server" CssClass="auto-style1" Text="&lt;-Update Your Parcel" />
+        <asp:Button ID="btnGoToUpdate" runat="server" CssClass="auto-style1" Text="&lt;-Update Your Parcel" OnClick="btnGoToUpdate_Click" />
     </form>
 </body>
 </html>

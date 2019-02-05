@@ -114,6 +114,24 @@ public class clsSecurity
         return Message;
     }
 
+    //public int GetAccountNoByEmail(string EMail)
+    //{
+    //    //connect to the database and see if it there already
+    //    clsDataConnection DB = new clsDataConnection();
+    //    DB.AddParameter("@AccountEMail", EMail.ToLower());
+    //    int PrimaryKey = DB.Execute("sproc_tblAccount_GetAccountNoByEmail");
+    //    return PrimaryKey;
+    //}
+
+    public void UpdateCustomerNo(string EMail,int CustomerNo)
+    {
+        //connect to the database and see if it there already
+        clsDataConnection DB = new clsDataConnection();
+        DB.AddParameter("@AccountEMail", EMail.ToLower());
+        DB.AddParameter("@CustomerNo", CustomerNo);
+        int Zero = DB.Execute("sproc_tblAccount_UpdateCustomerNo");
+    }
+
     private Boolean EMailTaken(string EMail)
     {
         //tests to see if the email address is taken

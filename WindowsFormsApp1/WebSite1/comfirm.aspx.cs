@@ -16,4 +16,9 @@ public partial class comfirm : System.Web.UI.Page
     {
 
     }
+
+    protected void btnGoToUpdate_Click(object sender, EventArgs e)
+    {
+
+    }
 }
