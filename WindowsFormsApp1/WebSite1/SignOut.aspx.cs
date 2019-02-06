@@ -18,6 +18,6 @@ public partial class SignOut : System.Web.UI.Page
         //update the copy in the session
         Session["Sec"] = Sec;
         //re-direct to the main page
-        Response.Redirect("Default.aspx");
+        Response.Redirect("Index.aspx");
     }
 }

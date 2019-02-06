@@ -52,8 +52,16 @@ public partial class SignUp : System.Web.UI.Page
 
     protected void btnView_Click(object sender, EventArgs e)
     {
-        //view the email
-        Response.Redirect("EMailViewer.aspx");
+        if(lblError.Text== "An email has been sent to your account allowing you to activate the account")
+        {
+            //view the email
+            Response.Redirect("EMailViewer.aspx");
+        }
+        else
+        {
+            lblError.Text = "Please double check your information and click Sign-up";
+        }
+        
     }
 
     protected void btnReSend_Click(object sender, EventArgs e)

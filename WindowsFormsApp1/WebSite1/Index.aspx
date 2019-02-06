@@ -8,11 +8,11 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 40px;
+            width: 173px;
             height: 16px;
             position: absolute;
-            left: 66px;
-            top: 22px;
+            left: 115px;
+            top: 54px;
         }
         .auto-style2 {
             top: 21px;
@@ -49,7 +49,7 @@
             height: 21px;
             width: 62px;
         }
-    </style>
+        </style>
 </head>
 <body style="position: relative; top: 0px; left: 0px; height: 292px; background-image:url(img/BG.jpg); background-repeat:repeat-x; ">
     <form id="form1" runat="server">

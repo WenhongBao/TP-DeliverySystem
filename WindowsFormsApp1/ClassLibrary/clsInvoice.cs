@@ -162,5 +162,19 @@ namespace ClassLibrary
                 return false;
             }
         }
+
+        public int Add(string someDateCreated, double somePrice, string somePostcode,Int32 someOrderNo)
+        {
+            // adds a new record to the database based on the values of thisTutor
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@DateCreated", someDateCreated);
+            DB.AddParameter("@Price", somePrice);
+            DB.AddParameter("@Postcode", somePostcode);
+            DB.AddParameter("@OrderNo", someOrderNo);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblInvoice_Insert");
+        }
     }
 }

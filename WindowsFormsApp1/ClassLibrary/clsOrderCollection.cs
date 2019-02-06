@@ -72,6 +72,19 @@ namespace ClassLibrary1
             PopulateArray(DB);
         }
 
+        public void FilterByDestinationPostcode(string DestinationPostcode)
+        {
+            //filters the records based on a full or partial first name
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the FirstName parameter to the database
+            DB.AddParameter("@DestinationPostcode", DestinationPostcode);
+            //execte the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByDestinationPostcode");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+
         void PopulateArray(clsDataConnection DB)
         {
             //populates the array list based on the data table in the parameter DB

@@ -28,8 +28,9 @@ public partial class Index : System.Web.UI.Page
 
         //create a customer object
         clsCustomer customer = new clsCustomer();
-        string FirstName = customer.GetFirstNameByEmail(Sec.UserEMail);
-        lblHi.Text = "Hi~  " + FirstName;
+        Boolean Found = false;
+        Found = customer.GetFirstNameByEmail(Sec.UserEMail);
+        lblHi.Text = "Hi~  " + customer.FirstName;
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
@@ -57,7 +58,6 @@ public partial class Index : System.Web.UI.Page
     {
         //go to Track a parcel
         Response.Redirect("TrackAParcel.aspx");
-
     }
 
     protected void btnSignOut_Click(object sender, EventArgs e)
@@ -91,6 +91,7 @@ public partial class Index : System.Web.UI.Page
         //if logged in display the following
         btnChangePassword.Visible = Auth;
         btnSignOut.Visible = Auth;
+        btnTrackAParcel.Visible = Auth;
     }
 
 }

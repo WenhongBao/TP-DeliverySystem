@@ -238,13 +238,38 @@ namespace ClassLibrary
 
         
 
-        public string GetFirstNameByEmail(string EMail)
+        public bool GetFirstNameByEmail(string EMail)
         {
             //connect to the database and see if it there already
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@Email", EMail.ToLower());
-            string FirstName = DB.Execute("sproc_tblCustomer_GetFirstNameByEmail");
-            return FirstName;
+            DB.Execute("sproc_tblCustomer_GetFirstNameByEmail");
+            if (DB.Count == 1)
+            {
+                mFirstName = Convert.ToString(DB.DataTable.Rows[0]["FirstName"]);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool GetCustomerNoByEmail(string EMail)
+        {
+            //connect to the database and see if it there already
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@Email", EMail.ToLower());
+            DB.Execute("sproc_tblCustomer_GetCustomerNoByEmail");
+            if (DB.Count == 1)
+            {
+                mCustomerNo = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerNo"]);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }

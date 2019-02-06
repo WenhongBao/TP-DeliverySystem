@@ -8,7 +8,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 40px;
+            width: 170px;
             height: 16px;
             position: absolute;
             left: 774px;
@@ -59,7 +59,7 @@
         <asp:Button ID="btnGotoMainPage" runat="server" Height="21px" style="top: 34px; left: 34px; position: absolute; width: 95px" Text="&lt;- Main Page" OnClick="btnGotoMainPage_Click" />
         <asp:Label ID="lblError" runat="server" style="top: 306px; left: 769px; position: absolute; height: 16px; width: 385px"></asp:Label>
         <asp:Label ID="lblPrice" runat="server" CssClass="auto-style1" Text="Price: "></asp:Label>
-        <asp:Button ID="btnCalculate" runat="server" CssClass="auto-style2" Text="Calculate the Price" />
+        <asp:Button ID="btnCalculate" runat="server" CssClass="auto-style2" Text="Calculate the Price" OnClick="btnCalculate_Click" />
     </form>
 </body>
 </html>
