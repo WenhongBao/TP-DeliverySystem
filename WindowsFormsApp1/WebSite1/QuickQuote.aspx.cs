@@ -25,6 +25,9 @@ public partial class QuickQuote : System.Web.UI.Page
             Session["Sec"] = Sec;
         }
 
+        //Control the visiable
+        btnGotoTrackAParcel.Visible = Sec.Authenticated;
+
         //create a customer object
         clsCustomer customer = new clsCustomer();
         Boolean Found = false;
@@ -221,5 +224,6 @@ public partial class QuickQuote : System.Web.UI.Page
             }
             return price;
         }
+
     }
 }

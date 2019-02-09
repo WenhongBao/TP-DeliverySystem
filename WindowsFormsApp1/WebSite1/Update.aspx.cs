@@ -51,6 +51,7 @@ public partial class Update : System.Web.UI.Page
 
     protected void btnCancelTheOrder_Click(object sender, EventArgs e)
     {
-
+        //go to comfirm
+        Response.Redirect("comfirm.aspx");
     }
 }

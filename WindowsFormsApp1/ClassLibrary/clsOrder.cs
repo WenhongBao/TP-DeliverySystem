@@ -268,15 +268,16 @@ namespace ClassLibrary1
             }
         }
 
-        public bool FilterByOrderNo(int orderNo)
+        public bool FilterByOrderNoAndCustomerNo(int orderNo,int customerNo)
         {
             //filters the records based on a full or partial first name
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //send the FirstName parameter to the database
             DB.AddParameter("@OrderNo", orderNo);
+            DB.AddParameter("@CustomerNo", customerNo);
             //execte the stored procedure
-            DB.Execute("sproc_tblOrder_FilterByOrderNo");
+            DB.Execute("sproc_tblOrder_FilterByOrderNoAndCustomerNo");
             if (DB.Count == 1)
             {
                 mStatus = Convert.ToString(DB.DataTable.Rows[0]["Status"]);

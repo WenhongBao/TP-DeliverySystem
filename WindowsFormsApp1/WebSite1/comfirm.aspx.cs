@@ -33,6 +33,8 @@ public partial class comfirm : System.Web.UI.Page
         string status = "Cancel";
         //Update
         AnOrder.UpdateStatus(Sec.OrderNo,status);
+        //display the result
+        lblComfirmText.Text = "The order have been cancel";
     }
 
     protected void btnGoToUpdate_Click(object sender, EventArgs e)
@@ -42,6 +44,12 @@ public partial class comfirm : System.Web.UI.Page
     }
 
     protected void btnNo_Click(object sender, EventArgs e)
+    {
+        //go to Update
+        Response.Redirect("Update.aspx");
+    }
+
+    protected void btnNo_Click1(object sender, EventArgs e)
     {
         //go to Update
         Response.Redirect("Update.aspx");

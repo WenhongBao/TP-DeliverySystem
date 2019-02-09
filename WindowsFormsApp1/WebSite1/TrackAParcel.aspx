@@ -38,7 +38,7 @@
         }
         .auto-style6 {
             top: 399px;
-            left: 1088px;
+            left: 1181px;
             position: absolute;
             height: 21px;
             width: 97px;
@@ -54,11 +54,11 @@
             width: 425px;
             height: 16px;
             position: absolute;
-            left: 767px;
-            top: 51px;
+            left: 768px;
+            top: 63px;
         }
         .auto-style9 {
-            width: 1049px;
+            width: 1146px;
             height: 234px;
             position: absolute;
             left: 135px;
@@ -88,7 +88,7 @@
         <asp:Button ID="btnGotoQuickQuote" runat="server" Text="Quick Quote" OnClick="btnGotoQuickQuote_Click" CssClass="auto-style6" />
         <asp:TextBox ID="tbxOrderNo" runat="server" CssClass="auto-style10"></asp:TextBox>
         <asp:Button ID="btnGotoMainPage" runat="server" style="top: 39px; left: 56px; position: absolute; height: 21px; width: 94px" Text="&lt;- Main Page" OnClick="btnGotoMainPage_Click" />
-        <asp:Label ID="Label1" runat="server" CssClass="auto-style8" Text="You can Update the Destination Postcode just click &quot;Update the Order&quot;."></asp:Label>
+        <asp:Label ID="Label1" runat="server" CssClass="auto-style8" Text="Input an OrderNo for Update"></asp:Label>
     </form>
 </body>
 </html>

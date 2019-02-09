@@ -130,7 +130,7 @@
                 <br />
         </div>
         <asp:Button ID="btnSignUp" runat="server" Text="Sign-up" OnClick="btnSignUp_Click" />
-&nbsp;<asp:Button ID="btnDone" runat="server" Text="Done" OnClick="btnDone_Click" />
+&nbsp;<asp:Button ID="btnDone" runat="server" Text="Go Back" OnClick="btnDone_Click" />
 &nbsp;<asp:Button ID="btnReSend" runat="server" Text="Re-set Password" OnClick="btnReSend_Click" />
 &nbsp;<asp:Button ID="btnView" runat="server" OnClick="btnView_Click" Text="View Email" />
             <asp:TextBox ID="txtFirstName" runat="server" CssClass="auto-style5" Width="318px"></asp:TextBox>

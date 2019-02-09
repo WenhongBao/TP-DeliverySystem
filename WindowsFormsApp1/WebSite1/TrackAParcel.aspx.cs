@@ -80,7 +80,7 @@ public partial class TrackAParcel : System.Web.UI.Page
             lblError.Text = "Please enter an integer";
         }
         //Check if the orderNo is exist
-        else if(order.FilterByOrderNo(Convert.ToInt32(tbxOrderNo.Text))==false)
+        else if(order.FilterByOrderNoAndCustomerNo(Convert.ToInt32(tbxOrderNo.Text),CustomerNo)==false)
         {
             lblError.Text = "Could not find this OrderNo in your account.";
         }
