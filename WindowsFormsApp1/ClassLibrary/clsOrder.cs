@@ -267,5 +267,44 @@ namespace ClassLibrary1
                 return false;
             }
         }
+
+        public bool FilterByOrderNo(int orderNo)
+        {
+            //filters the records based on a full or partial first name
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the FirstName parameter to the database
+            DB.AddParameter("@OrderNo", orderNo);
+            //execte the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByOrderNo");
+            if (DB.Count == 1)
+            {
+                mStatus = Convert.ToString(DB.DataTable.Rows[0]["Status"]);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void UpdateDestinationPostcode(Int32 OrderNo, string DestinationPostcode)
+        {
+            //connect to the database and see if it there already
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@DestinationPostcode", DestinationPostcode);
+            DB.AddParameter("@OrderNo", OrderNo);
+            int Zero = DB.Execute("sproc_tblOrder_UpdateDestinationPostcode");
+        }
+
+        
+        public void UpdateStatus(Int32 OrderNo, string Status)
+        {
+            //connect to the database and see if it there already
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@Status", Status);
+            DB.AddParameter("@OrderNo", OrderNo);
+            int Zero = DB.Execute("sproc_tblOrder_UpdateStatus");
+        }
     }
 }

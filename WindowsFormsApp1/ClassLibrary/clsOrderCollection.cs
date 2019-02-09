@@ -72,15 +72,16 @@ namespace ClassLibrary1
             PopulateArray(DB);
         }
 
-        public void FilterByDestinationPostcode(string DestinationPostcode)
+        public void FilterByDestinationPostcodeAndCustomerNo(string DestinationPostcode,Int32 CustomerNo)
         {
             //filters the records based on a full or partial first name
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //send the FirstName parameter to the database
             DB.AddParameter("@DestinationPostcode", DestinationPostcode);
+            DB.AddParameter("@CustomerNo", CustomerNo);
             //execte the stored procedure
-            DB.Execute("sproc_tblOrder_FilterByDestinationPostcode");
+            DB.Execute("sproc_tblOrder_FilterByDestinationPostcodeAndCustomerNo");
             //populate the array list with the data table
             PopulateArray(DB);
         }
@@ -117,6 +118,21 @@ namespace ClassLibrary1
                 Index++;
             }
         }
+
+        public void FilterByCustomerNo(int customerNo)
+        {
+            //filters the records based on a full or partial first name
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the FirstName parameter to the database
+            DB.AddParameter("@CustomerNo", customerNo);
+            //execte the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByCustomerNo");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+
+        
 
         public int Add()
         {

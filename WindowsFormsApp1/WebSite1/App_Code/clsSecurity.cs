@@ -42,6 +42,8 @@ public class clsSecurity
     private Int32 mAttempts;
     //stores the most recently sent email message by the security system
     private clsEMail mEMailMessage;
+    //store the OrderNo
+    private Int32 mOrderNo = 0;
 
     //constructor
     public clsSecurity()
@@ -263,6 +265,20 @@ public class clsSecurity
         {
             //retunr the message
             return mEMailMessage;
+        }
+    }
+
+    public Int32 OrderNo
+    //allows access to orderNo of the current user
+    {
+        get
+        {
+            //return the orderNo
+            return mOrderNo;
+        }
+        set
+        {
+            mOrderNo = value;
         }
     }
 
