@@ -132,7 +132,31 @@ namespace ClassLibrary1
             PopulateArray(DB);
         }
 
-        
+        public void FilterByOrderNo(int orderNo)
+        {
+            //filters the records based on a full or partial first name
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the FirstName parameter to the database
+            DB.AddParameter("@OrderNo", orderNo);
+            //execte the stored procedure
+            DB.Execute("sproc_tblOrder_FilterByOrderNo");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+
+        public void ListAllOrder()
+        {
+            //filters the records based on a full or partial first name
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //execte the stored procedure
+            DB.Execute("sproc_tblOrder_SelectAll");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+
+
 
         public int Add()
         {

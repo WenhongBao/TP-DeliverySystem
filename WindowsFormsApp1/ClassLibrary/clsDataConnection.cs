@@ -61,8 +61,6 @@ namespace ClassLibrary
                     //if the file is not a system database file
                     if (filePaths[PathArrayIndex].Contains("app_data") == true)
                     {
-                        //change the url
-                        filePaths[PathArrayIndex] = "c:\\users\\administrator\\desktop\\team development\\deliverysystem\\windowsformsapp1\\website1\\app_data";
                         //get the list of files in the folder
                         dirConts = System.IO.Directory.GetFiles(filePaths[PathArrayIndex], "*.mdf", System.IO.SearchOption.AllDirectories);
                         Counter = 0;

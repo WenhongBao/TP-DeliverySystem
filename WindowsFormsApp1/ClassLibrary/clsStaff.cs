@@ -214,5 +214,22 @@ namespace ClassLibrary1
                 return false;
             }
         }
+
+        public int Add(string someEmail, string someFirstName, string someLastName, string somePostcode, string someTelephone, string someTitle)
+        {
+            //adds a new record to the database based on the values of thisTutor
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            //DB.AddParameter("@OrderNo", mThisOrder.OrderNo);
+            DB.AddParameter("@Email", someEmail);
+            DB.AddParameter("@FirstName", someFirstName);
+            DB.AddParameter("@LastName", someLastName);
+            DB.AddParameter("@Telephone", someTelephone);
+            DB.AddParameter("@Title", someTitle);
+            //DB.AddParameter("@AccountNo", someAccountNo);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblCustomer_Insert");
+        }
     }
 }
